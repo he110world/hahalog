@@ -1,6 +1,6 @@
 {
   "name": "lualog",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "Lua log server",
   "main": "./lib/lualog",
   "repository": {
