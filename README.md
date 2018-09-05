@@ -1,31 +1,28 @@
-[![build status](https://img.shields.io/travis/indexzero/http-server.svg?style=flat-square)](https://travis-ci.org/indexzero/http-server)
-[![dependencies status](https://img.shields.io/david/indexzero/http-server.svg?style=flat-square)](https://david-dm.org/indexzero/http-server)
-[![npm](https://img.shields.io/npm/v/http-server.svg?style=flat-square)](https://www.npmjs.com/package/http-server)
-[![license](https://img.shields.io/github/license/indexzero/http-server.svg?style=flat-square)](https://github.com/indexzero/http-server)
+## Installation:
 
-# http-server: a command-line http server
+     sudo npm i lualog -g
 
-`http-server` is a simple, zero-configuration command-line http server.  It is powerful enough for production usage, but it's simple and hackable enough to be used for testing, local development, and learning.
+In case you don't have node.js installed, you should run the following commands first:
 
-![](https://github.com/nodeapps/http-server/raw/master/screenshots/public.png)
+     curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
-# Installing globally:
+     sudo apt install -y nodejs build-essential
 
-Installation via `npm`:
+Or you can just execute the follow commands:
 
-     npm install http-server -g
-
-This will install `http-server` globally so that it may be run from the command line.
+     curl -s https://raw.githubusercontent.com/he110world/lualog/master/install.sh | bash
 
 ## Usage:
 
-     http-server [path] [options]
+     lualog [path] [options]
 
-`[path]` defaults to `./public` if the folder exists, and `./` otherwise.
+Both [path] and [options] are optional.
 
-*Now you can visit http://localhost:8080 to view your server*
+You can POST to http://<server-address>:<server-port>/lualog/<user_id> to add or append to logs
 
-**Note:** Caching is on by default. Add `-c-1` as an option to disable caching.
+You can GET the log list from http://<server-address>:<server-port>/lualog
+
+Click the log link to view the log
 
 ## Available Options:
 
@@ -62,22 +59,3 @@ This will install `http-server` globally so that it may be run from the command 
 `-r` or `--robots` Provide a /robots.txt (whose content defaults to `User-agent: *\nDisallow: /`)
 
 `-h` or `--help` Print this list and exit.
-
-## Magic Files
-
-- `index.html` will be served as the default file to any directory requests.
-- `404.html` will be served if a file is not found. This can be used for Single-Page App (SPA) hosting to serve the entry page.
-
-# Development
-
-Checkout this repository locally, then:
-
-```sh
-$ npm i
-$ node bin/http-server
-```
-
-*Now you can visit http://localhost:8080 to view your server*
-
-You should see the turtle image in the screenshot above hosted at that URL. See
-the `./public` folder for demo content.
