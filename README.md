@@ -18,11 +18,11 @@ Or you can just execute the follow commands:
 
 Both [path] and [options] are optional.
 
-You can POST to http://<server-address>:<server-port>/lualog/<user_id> to add or append to logs
+**You can POST to http://<server-address>:<server-port>/lualog/<user_id> to add or append to logs**
 
-You can GET the log list from http://<server-address>:<server-port>/lualog
+**You can GET the log list from http://<server-address>:<server-port>/lualog**
 
-Click the log link to view the log
+**Click the log link to view the log**
 
 ## Available Options:
 
